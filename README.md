@@ -1,1 +1,0 @@
-# Deploying_bucketed_SDXL_on_inferencia2
