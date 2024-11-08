@@ -14,8 +14,8 @@ https://awsdocs-neuron.readthedocs-hosted.com/en/latest/general/setup/torch-neur
 
 ## 4) 성능 요약
 각각의 입출력 이미지를 대상으로 컴파일된 다섯 개 뉴런 모델은 동작 속도 측면에서 다음과 같은 성능을 보입니다.
-384x384   --> ||
-512x512   --> 14it/sec ||
-768x768   --> 5it/sec ||
-896x896   --> ||
-1024x1024 --> 2it/sec ||   
+384x384   --> 21.39it/sec||
+512x512   --> 14.01it/sec ||
+768x768   --> 5.16it/sec ||
+896x896   --> 2.35it/sec ||
+1024x1024 --> 2.28it/sec ||   
