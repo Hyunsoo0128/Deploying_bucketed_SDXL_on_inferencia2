@@ -6,7 +6,7 @@ SDXL 모델은 1024x1024 픽셀로 입출력 이미지의 사이즈가 고정되
 https://awsdocs-neuron.readthedocs-hosted.com/en/latest/general/appnotes/torch-neuron/bucketing-app-note.html
 
 ## 2) 코드 범위
-본 코드에서는 512x512 픽셀과 640x640 픽셀, 768x768 픽셀, 896x896 픽셀, 1024x1024 픽셀의 입출력 이미지에 대하여 버켓팅된 다섯개 SDXL 모델을 컴파일하여 각각의 Neuron 모델을 생성하고, 이를 inferentia2 인스턴스에서 구동하는 방법을 설명합니다. 본 예제에서는 HuggingFace의 stabilityai/stable-diffusion-xl-refiner-1.0 모델과 EC2의 inf2.24xlarge 인스턴스를 사용하였습니다. 
+본 코드에서는 384x384 픽셀 사이즈, 512x512 픽셀 사이즈, 768x768 픽셀 사이즈, 896x896 픽셀 사이즈, 1024x1024 픽셀 사이즈의 입출력 이미지에 대하여 버켓팅된 다섯개 SDXL 모델을 컴파일하여 각각의 Neuron 모델을 생성하고, 이를 inferentia2 인스턴스에서 구동하는 방법을 설명합니다. 본 예제에서는 HuggingFace의 stabilityai/stable-diffusion-xl-refiner-1.0 모델과 EC2의 inf2.24xlarge 인스턴스를 사용하였습니다. 
   
 ## 3) 사전 환경 설정
 시작에 앞서 Inf2 셋업 가이드에 따라 EC2 인스턴스에 torch-neuronx 와 neuronx-cc 를 설치해야합니다. 이에 관한 자세한 설명을 다음 링크를 참고하시기 바랍니다.
@@ -14,8 +14,8 @@ https://awsdocs-neuron.readthedocs-hosted.com/en/latest/general/setup/torch-neur
 
 ## 4) 성능 요약
 각각의 입출력 이미지를 대상으로 컴파일된 두개의 뉴런 모델은 동작 속도 측면에서 다음과 같은 성능을 보입니다.
+384x384   --> ||
 512x512   --> 14it/sec ||
-640x640   -->  ||
 768x768   --> 5it/sec ||
 896x896   --> ||
 1024x1024 --> 2it/sec ||   
