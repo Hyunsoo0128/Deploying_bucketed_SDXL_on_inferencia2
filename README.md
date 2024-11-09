@@ -12,11 +12,7 @@ https://awsdocs-neuron.readthedocs-hosted.com/en/latest/general/appnotes/torch-n
 시작에 앞서 Inf2 셋업 가이드에 따라 EC2 인스턴스에 torch-neuronx 와 neuronx-cc 를 설치해야합니다. 이에 관한 자세한 설명을 다음 링크를 참고하시기 바랍니다.
 https://awsdocs-neuron.readthedocs-hosted.com/en/latest/general/setup/torch-neuronx.html#setup-torch-neuronx
 
-## 4) 사전 컴파일된 뉴런 모델 사용
-사전에 컴파일된 뉴런 모델이 압축된 model.tar 파일을 이용하여 컴파일을 추가로 진행하지 않고 바로 Inf2 인스턴스에서 SDXL 모델을 구동할 수 있습니다.
-해당 파일의 압축을 풀면 각 픽셀 사이즈의 입력 이미지에 특화되어 컴파일된 뉴런 모델이 저장된 sdxl_img2img_compile_dir_1024/ 폴더가 생성됩니다.
-
-## 5) 성능 요약
+## 4) 성능 요약
 각각의 입출력 이미지를 대상으로 컴파일된 다섯 개 뉴런 모델은 동작 속도 측면에서 다음과 같은 성능을 보입니다.
 384x384   --> 21.39it/sec||
 512x512   --> 14.01it/sec ||
